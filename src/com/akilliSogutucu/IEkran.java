@@ -1,11 +1,11 @@
 package com.akilliSogutucu;
 
 public interface IEkran {
-    public Kullanici acilisMesajı();
-    public Kullanici kullaniciGirisEkrani();
+    public void acilisMesajı();
+    public Kullanici kullaniciGirisEkrani(TusTakimi tusTakimi);
     public void kullaniciDogrulanmaMesaji(boolean dogrulandiMi);
     public void kullaniciCıkısEkrani(Kullanici kullanici);
-    public int kullaniciSecenekleri();
+    public int kullaniciSecenekleri(TusTakimi tusTakimi);
     public int hataliKullanici();
     public void mesajYaz(String mesaj);
 }

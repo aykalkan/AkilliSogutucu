@@ -12,13 +12,9 @@ public class AkilliSogutucu {
     }
 
     public void basla(){
-        Kullanici kullanici = ekran.acilisMesajı();
+        ekran.acilisMesajı();
+        Kullanici kullanici = ekran.kullaniciGirisEkrani(tusTakimi);
 
-
-
-    }
-
-    private int KullaniciDogrula (Kullanici kullanici) {
         boolean cikisYapilsinMi = true;
         int secenek = 0;
 
@@ -26,12 +22,12 @@ public class AkilliSogutucu {
             boolean kullaniciDogrulandiMi = veritabani.kullaniciDogrula(kullanici);
             ekran.kullaniciDogrulanmaMesaji(kullaniciDogrulandiMi);
             if (kullaniciDogrulandiMi)
-                secenek = ekran.kullaniciSecenekleri();
+                secenek = ekran.kullaniciSecenekleri(tusTakimi);
             else {
                 ekran.mesajYaz("Tekrar denemek ister misiniz? (E/H)");
-                boolean tekrarDenemeYapilsinMi = tusTakimi.veriAl().equalsIgnoreCase("E");
+                boolean tekrarDenemeYapilsinMi = tusTakimi.stringVeriAl().equalsIgnoreCase("E");
                 if (tekrarDenemeYapilsinMi)
-                    kullanici = ekran.kullaniciGirisEkrani();
+                    kullanici = ekran.kullaniciGirisEkrani(tusTakimi);
                 else {
                     ekran.mesajYaz("--- Hoşçakalın ---");
                     cikisYapilsinMi = false;
@@ -39,8 +35,9 @@ public class AkilliSogutucu {
             }
         }while (cikisYapilsinMi);
 
-        return secenek;
+
     }
+
 }
 
 
