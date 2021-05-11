@@ -28,8 +28,8 @@ public class Ekran implements IEkran {
     }
 
     @Override
-    public void kullaniciCıkısEkrani(Kullanici kullanici) {
-
+    public void kullaniciCıkısEkrani() {
+        this.mesajYaz("--- Hoşçakalın, yine bekleriz ---");
     }
 
     @Override
@@ -57,12 +57,22 @@ public class Ekran implements IEkran {
     }
 
     @Override
-    public int hataliKullanici() {
-        return 0;
+    public void mesajYaz(String mesaj) {
+        System.out.println(mesaj);
     }
 
     @Override
-    public void mesajYaz(String mesaj) {
-        System.out.println(mesaj);
+    public void sicaklikGoruntule() {
+
+    }
+
+    @Override
+    public void sogutucuAc() {
+
+    }
+
+    @Override
+    public void sogutucuKapat() {
+
     }
 }

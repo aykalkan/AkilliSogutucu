@@ -1,7 +1,7 @@
 package com.akilliSogutucu;
 
 public interface ISubject {
-    public void attach(IObserver o);
-    public void detach(IObserver o);
-    public void notify(String m);
+    public void attach(IObserver subscriber);
+    public void detach(IObserver subcriber);
+    public void notify(int mesaj);
 }

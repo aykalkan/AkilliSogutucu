@@ -1,5 +1,5 @@
 package com.akilliSogutucu;
 
-public interface ISicaklikAlgilayici {
+public interface IAlgilayici extends ISubject {
     public int sicaklikOku();
 }
