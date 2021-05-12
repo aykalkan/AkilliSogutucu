@@ -9,7 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class KisilerRepositoryPostgreSql {
+public class KisilerRepositoryPostgreSql implements IKisilerRepository{
 
     private Connection baglan() {
 

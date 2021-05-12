@@ -1,11 +1,11 @@
 package com.akilliSogutucu;
 
 public class AkilliSogutucu {
-    Ekran ekran;
-    TusTakimi tusTakimi;
-    AgArayuzu agArayuzu;
-    SicaklikAlgilayici sicaklikAlgilayici;
-    KisilerRepositoryPostgreSql kisilerVeritabani;
+    IEkran ekran;
+    ITusTakimi tusTakimi;
+    IAgArayuzu agArayuzu;
+    ISicaklikAlgilayici sicaklikAlgilayici;
+    IKisilerRepository kisilerVeritabani;
     SicaklikRepositoryPostgreSql sicaklikVeritabani;
 
     AkilliSogutucu(){

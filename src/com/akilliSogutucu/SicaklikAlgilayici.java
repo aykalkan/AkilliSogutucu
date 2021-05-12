@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class SicaklikAlgilayici implements ISicakilkAlgilayici, Runnable{
+public class SicaklikAlgilayici implements ISicaklikAlgilayici, Runnable{
     private List<IObserver> subscribers = new ArrayList<IObserver>();
 
     @Override
