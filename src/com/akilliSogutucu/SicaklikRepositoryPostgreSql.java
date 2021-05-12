@@ -4,11 +4,11 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SicaklikRepositoryPostgreSql implements IObserver {
+public class SicaklikRepositoryPostgreSql implements ISicaklikRepository {
 
     @Override
-    public void update(int mesaj) {
-        this.kaydet(mesaj);
+    public void update(int sicaklik) {
+        this.kaydet(sicaklik);
     }
 
     private Connection baglan() {

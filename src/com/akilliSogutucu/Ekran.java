@@ -9,7 +9,7 @@ public class Ekran implements IEkran {
     }
 
     @Override
-    public Kullanici kullaniciGirisEkrani(TusTakimi tusTakimi) {
+    public Kullanici kullaniciGirisEkrani(ITusTakimi tusTakimi) {
         System.out.println("Kullanıcı adını giriniz:");
         String kullaniciAdi = tusTakimi.stringVeriAl();
 
@@ -33,7 +33,7 @@ public class Ekran implements IEkran {
     }
 
     @Override
-    public int kullaniciSecenekleri(TusTakimi tusTakimi) {
+    public int kullaniciSecenekleri(ITusTakimi tusTakimi) {
         boolean secenekHataliMi = false;
         int secenek;
 

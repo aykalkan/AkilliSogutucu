@@ -6,7 +6,7 @@ public class AkilliSogutucu {
     IAgArayuzu agArayuzu;
     ISicaklikAlgilayici sicaklikAlgilayici;
     IKisilerRepository kisilerVeritabani;
-    SicaklikRepositoryPostgreSql sicaklikVeritabani;
+    ISicaklikRepository sicaklikVeritabani;
 
     AkilliSogutucu(){
         ekran = new Ekran();

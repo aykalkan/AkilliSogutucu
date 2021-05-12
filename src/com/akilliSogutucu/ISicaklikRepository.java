@@ -1,2 +1,4 @@
-package com.akilliSogutucu;public interface ISicaklikRepository {
+package com.akilliSogutucu;
+
+public interface ISicaklikRepository extends IObserver{
 }
