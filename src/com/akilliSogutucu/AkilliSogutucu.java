@@ -22,31 +22,29 @@ public class AkilliSogutucu {
 
     public void basla(){
         ekran.acilisMesajı();
-        Kullanici kullanici = ekran.kullaniciGirisEkrani(tusTakimi);
+        Kullanici kullanici;
 
-        new Thread(sicaklikAlgilayici).start();
+        Thread run = new Thread(sicaklikAlgilayici);
+        run.start();
+
         boolean cikisYapilsinMi = false;
         int secenek = 0;
 
         do {
-
+            kullanici = ekran.kullaniciGirisEkrani(tusTakimi);
             boolean kullaniciDogrulandiMi = kisilerVeritabani.kullaniciDogrula(kullanici);
             ekran.kullaniciDogrulanmaMesaji(kullaniciDogrulandiMi);
+
             if (kullaniciDogrulandiMi)
                 secenek = ekran.kullaniciSecenekleri(tusTakimi);
-
             else {
                 ekran.mesajYaz("Tekrar denemek ister misiniz? (E/H)");
-                boolean tekrarDenemeYapilsinMi = tusTakimi.stringVeriAl().equalsIgnoreCase("E");
-                if (tekrarDenemeYapilsinMi)
-                    kullanici = ekran.kullaniciGirisEkrani(tusTakimi);
-                else {
-                    ekran.kullaniciCıkısEkrani();;
-                    cikisYapilsinMi = true;
-                }
+                cikisYapilsinMi = tusTakimi.stringVeriAl().equalsIgnoreCase("H");
             }
         }while (!cikisYapilsinMi);
 
+        ekran.kullaniciCıkısEkrani();
+        run.stop();
 
     }
 
@@ -62,7 +60,6 @@ public class AkilliSogutucu {
                 ekran.sogutucuAc();
                 break;
             case 3:
-                ekran.sicaklikGoruntule();
                 break;
         }
     }
