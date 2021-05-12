@@ -62,17 +62,18 @@ public class Ekran implements IEkran {
     }
 
     @Override
-    public void sicaklikGoruntule() {
+    public void sicaklikGoruntule(IAgArayuzu agArayuzu) {
+        int sicaklik = agArayuzu.sicaklikOku();
+        this.mesajYaz("\n--- Son okunan sıcaklık : " + sicaklik +  "C ---\n");
+    }
+
+    @Override
+    public void sogutucuAc(IAgArayuzu agArayuzu) {
 
     }
 
     @Override
-    public void sogutucuAc() {
-
-    }
-
-    @Override
-    public void sogutucuKapat() {
+    public void sogutucuKapat(IAgArayuzu agArayuzu) {
 
     }
 }

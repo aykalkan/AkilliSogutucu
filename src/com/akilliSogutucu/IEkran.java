@@ -7,7 +7,7 @@ public interface IEkran {
     public void kullaniciCıkısEkrani();
     public int kullaniciSecenekleri(ITusTakimi tusTakimi);
     public void mesajYaz(String mesaj);
-    public void sicaklikGoruntule();
-    public void sogutucuAc();
-    public void sogutucuKapat();
+    public void sicaklikGoruntule(IAgArayuzu agArayuzu);
+    public void sogutucuAc(IAgArayuzu agArayuzu);
+    public void sogutucuKapat(IAgArayuzu agArayuzu);
 }
