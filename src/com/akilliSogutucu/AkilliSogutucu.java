@@ -35,8 +35,10 @@ public class AkilliSogutucu {
             boolean kullaniciDogrulandiMi = kisilerVeritabani.kullaniciDogrula(kullanici);
             ekran.kullaniciDogrulanmaMesaji(kullaniciDogrulandiMi);
 
-            if (kullaniciDogrulandiMi)
+            if (kullaniciDogrulandiMi){
                 secenek = ekran.kullaniciSecenekleri(tusTakimi);
+                cikisYapilsinMi = kullaniciIslemleri(secenek);
+            }
             else {
                 ekran.mesajYaz("Tekrar denemek ister misiniz? (E/H)");
                 cikisYapilsinMi = tusTakimi.stringVeriAl().equalsIgnoreCase("H");
@@ -45,13 +47,14 @@ public class AkilliSogutucu {
 
         ekran.kullaniciCıkısEkrani();
         run.stop();
-
     }
 
-    private void kullaniciIslemleri(int secenek){
+    private boolean kullaniciIslemleri(int secenek){
+        boolean cikisYapilsinMi = false;
+
         switch (secenek){
             case 0:
-                ekran.kullaniciCıkısEkrani();
+                cikisYapilsinMi = true;
                 break;
             case 1:
                 ekran.sicaklikGoruntule();
@@ -60,8 +63,11 @@ public class AkilliSogutucu {
                 ekran.sogutucuAc();
                 break;
             case 3:
+                ekran.sogutucuKapat();
                 break;
         }
+
+        return cikisYapilsinMi;
     }
 
 }
