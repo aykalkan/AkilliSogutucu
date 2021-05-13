@@ -29,7 +29,7 @@ public class Ekran implements IEkran {
 
     @Override
     public void kullaniciCıkısEkrani() {
-        this.mesajYaz("--- Hoşçakalın, yine bekleriz ---");
+        this.mesajYaz("\n--- Hoşçakalın, yine bekleriz ---\n");
     }
 
     @Override
@@ -64,7 +64,7 @@ public class Ekran implements IEkran {
     @Override
     public void sicaklikGoruntule(IAgArayuzu agArayuzu) {
         int sicaklik = agArayuzu.sicaklikOku();
-        this.mesajYaz("\n--- Son okunan sıcaklık : " + sicaklik +  "C ---\n");
+        this.mesajYaz("\n--- Son okunan sıcaklık : " + sicaklik +  " C ---\n");
     }
 
     @Override

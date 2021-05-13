@@ -34,18 +34,17 @@ public class AkilliSogutucu {
         boolean kullaniciDogrulandiMi = kisilerVeritabani.kullaniciDogrula(kullanici);
         ekran.kullaniciDogrulanmaMesaji(kullaniciDogrulandiMi);
         do {
-
-
-
             if (kullaniciDogrulandiMi){
                 secenek = ekran.kullaniciSecenekleri(tusTakimi);
                 cikisYapilsinMi = kullaniciIslemleri(secenek);
             }
             else {
                 ekran.mesajYaz("Tekrar denemek ister misiniz? (E/H)");
-                boolean tekrarDenensinMi = tusTakimi.stringVeriAl().equalsIgnoreCase("H");
-                if (tekrarDenensinMi)
+                boolean tekrarDenensinMi = tusTakimi.stringVeriAl().equalsIgnoreCase("E");
+                if (tekrarDenensinMi){
                     kullanici = ekran.kullaniciGirisEkrani(tusTakimi);
+                    kullaniciDogrulandiMi = kisilerVeritabani.kullaniciDogrula(kullanici);
+                }
                 else
                     cikisYapilsinMi = true;
             }
