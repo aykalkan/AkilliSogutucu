@@ -69,11 +69,13 @@ public class Ekran implements IEkran {
 
     @Override
     public void sogutucuAc(IAgArayuzu agArayuzu) {
-
+        agArayuzu.sogutucuAc();
+        this.mesajYaz("\n--- Soğutucu açıldı ---\n");
     }
 
     @Override
     public void sogutucuKapat(IAgArayuzu agArayuzu) {
-
+        agArayuzu.sogutucuKapat();
+        this.mesajYaz("\n--- Soğutucu kapatıldı ---\n");
     }
 }
