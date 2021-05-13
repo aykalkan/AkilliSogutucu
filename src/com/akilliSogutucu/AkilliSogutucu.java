@@ -17,7 +17,6 @@ public class AkilliSogutucu {
         sicaklikAlgilayici = new SicaklikAlgilayici();
 
         sicaklikAlgilayici.attach(sicaklikVeritabani);
-
     }
 
     public void basla(){
